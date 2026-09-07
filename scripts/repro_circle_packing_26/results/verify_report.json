@@ -1,0 +1,32 @@
+{
+  "paper_score": 2.635983,
+  "hit_paper_record": true,
+  "config": {
+    "model": "gpt-oss-120b",
+    "selector": "rpucg",
+    "C": 16,
+    "L": 25,
+    "K": 8,
+    "max_generations": 3200,
+    "early_stop_score": 2.63598,
+    "instance": "a63bc1e3",
+    "completed_evaluations": 942,
+    "generation_failures": 0
+  },
+  "seed": {
+    "combined_score": 1.3903167444732365,
+    "validity": 1.0
+  },
+  "official_construction_json": {
+    "combined_score": 2.6359830849210715,
+    "validity": 1.0,
+    "note": "Scored the released construction array with the official evaluator (validate_solution + sum of radii). The released best_program.py needs cvxpy, which is not in the main venv."
+  },
+  "this_run": {
+    "combined_score": 2.6359830849176027,
+    "validity": 1.0,
+    "eval_time": 518.1163485050201,
+    "program": "scripts/repro_circle_packing_26/results/best_program.py"
+  },
+  "curve_png": "scripts/repro_circle_packing_26/results/score_curve.png"
+}

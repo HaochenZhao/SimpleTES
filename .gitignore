@@ -35,6 +35,8 @@ debug_runs/
 
 # LLM keys
 keys
+.env
+!.env.example
 
 # Local launcher profiles
 profiles/

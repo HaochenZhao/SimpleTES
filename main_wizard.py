@@ -25,6 +25,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import questionary
+from dotenv import load_dotenv
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
@@ -33,6 +34,9 @@ REPO_ROOT = Path(__file__).resolve().parent
 DATASETS_DIR = REPO_ROOT / "datasets"
 PROFILES_DIR = REPO_ROOT / "profiles"
 KEYS_DIR = REPO_ROOT / "keys"
+ENV_FILE = REPO_ROOT / ".env"
+
+load_dotenv(ENV_FILE)
 
 console = Console()
 

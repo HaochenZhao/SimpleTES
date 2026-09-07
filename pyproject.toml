@@ -23,6 +23,7 @@ dependencies = [
     "pandas>=3.0.0",
     "protobuf>=6.33.5",
     "psutil>=7.2.2",
+    "python-dotenv>=1.2.1",
     "questionary>=2.0.0",
     "rich>=13.0.0",
     "scikit-learn>=1.7.2",
@@ -45,3 +46,8 @@ testpaths = ["tests"]
 [tool.setuptools.packages.find]
 include = ["simpletes*"]
 exclude = ["tests*", "datasets*", "scripts*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

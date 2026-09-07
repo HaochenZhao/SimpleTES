@@ -78,6 +78,12 @@ Configure the model API before launching a run. Set credentials for any [LiteLLM
 export GEMINI_API_KEY=...      # or OPENAI_API_KEY / ANTHROPIC_API_KEY / ...
 ```
 
+Alternatively, copy `.env.example` to `.env` and fill it in — `main.py` and `main_wizard.py` load it at startup, and evaluator subprocesses inherit it. `.env` is gitignored, and shell variables that are already set take precedence over it.
+
+```bash
+cp .env.example .env
+```
+
 For a custom endpoint, enter the API base when running `main_wizard.py` or pass `--api-base` to the CLI. Prefer environment variables for API keys so secrets do not end up in shell history or committed configuration.
 
 Then install Python ≥ 3.11 dependencies with `uv`:

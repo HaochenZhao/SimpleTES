@@ -8,7 +8,14 @@ from __future__ import annotations
 
 import asyncio
 import sys
+from pathlib import Path
 from typing import TYPE_CHECKING
+
+from dotenv import load_dotenv
+
+# Provider credentials must reach os.environ before simpletes pulls in litellm,
+# and before evaluator subprocesses inherit the environment.
+load_dotenv(Path(__file__).resolve().parent / ".env")
 
 if TYPE_CHECKING:
     from simpletes.engine import SimpleTESEngine
