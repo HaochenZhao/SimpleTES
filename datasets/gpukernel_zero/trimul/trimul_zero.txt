@@ -1,0 +1,18 @@
+Implement the outgoing Triangle Multiplicative Update (TriMul) forward pass.
+
+Input `data` is (input, mask, weights, config):
+- input: float tensor [bs, seq_len, seq_len, dim]
+- mask: tensor [bs, seq_len, seq_len]
+- weights: dict of module weights
+- config: dict with dim / hidden_dim
+
+Output: tensor [bs, seq_len, seq_len, dim] matching the reference operator
+(LayerNorm, gated left/right projections, triangle contraction over the shared
+index, output LayerNorm / gate / projection).
+
+The evaluator recomputes correctness against the reference (rtol=atol=2e-2) and
+sets combined_score = 1 / geomean(latency_ms) over the official benchmark shapes.
+Higher is better. Invalid or crashing programs score 0.
+
+Do this by evolving the code between # EVOLVE-BLOCK-START and # EVOLVE-BLOCK-END.
+The time limit for each program evaluation is 1200 seconds.

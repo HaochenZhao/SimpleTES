@@ -148,17 +148,19 @@ def evaluate(program_path):
 
             if response.status_code == 200:
                 response_data = response.json()
-                if response_data.get("success") and response_data.get("result"):
-                    print("  - Success: True")
-                    print(f"  - Device ID: {response_data.get('device_id')}")
-                    print(f"  - Compiled: {response_data.get('result', {}).get('compiled')}")
-                    print(f"  - Correctness: {response_data.get('result', {}).get('correctness')}")
-                    print(f"  - Combined Score: {response_data.get('result', {}).get('combined_score', 0):.6f}")
-                    return response_data["result"]
-
-                print("  - Success: False")
-                print(f"  - Response data: {response_data.get('result', {}).get('metadata', {})}")
-                return response_data["result"]
+                result = response_data.get("result")
+                if isinstance(result, dict):
+                    if response_data.get("success"):
+                        print("  - Success: True")
+                        print(f"  - Device ID: {response_data.get('device_id')}")
+                        print(f"  - Compiled: {result.get('compiled')}")
+                        print(f"  - Correctness: {result.get('correctness')}")
+                        print(f"  - Combined Score: {result.get('combined_score', 0):.6f}")
+                    else:
+                        print("  - Success: False")
+                        print(f"  - Response data: {result.get('metadata', {})}")
+                    result.setdefault("combined_score", 0.0)
+                    return result
 
             print(f"  - HTTP Error from {server_url}: {response.status_code}")
             failed.add((server["ip"], server["port"]))
@@ -172,3 +174,11 @@ def evaluate(program_path):
         except Exception as e:
             print(f"[Client] Unexpected error on {server_url}: {e}")
             failed.add((server["ip"], server["port"]))
+
+    return {
+        "compiled": False,
+        "correctness": False,
+        "error": f"All kernel servers failed (tried {tried})",
+        "error_name": "No Server Available",
+        "combined_score": 0.0,
+    }

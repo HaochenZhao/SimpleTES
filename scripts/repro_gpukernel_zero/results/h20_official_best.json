@@ -1,0 +1,13 @@
+{
+  "program": "/apdcephfs_sgxy/share_304401417/hunyuan/haochenzhao/SimpleTES/best_results/ai_foundations/trimul/trimul_best.py",
+  "elapsed_s": 416.0,
+  "success": true,
+  "compiled": true,
+  "correctness": true,
+  "combined_score": 0.4825587700068058,
+  "latency_ms": 2.07228644914255,
+  "error": null,
+  "error_name": null,
+  "host": "28.33.243.17:8000",
+  "note": "H20 local benchmark-mode score; not paper H100 leaderboard"
+}

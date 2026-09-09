@@ -1,0 +1,7 @@
+# gpukernel_zero: dedicated exclusive eval node. Does not use upstream IPs.
+servers:
+  - ip: 28.33.243.17
+    port: 8000
+
+load_balance: random
+request_timeout: 3000
