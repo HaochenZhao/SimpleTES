@@ -1,0 +1,31 @@
+{
+  "winner": "4+4",
+  "winner_evals_per_min": 50.91,
+  "winner_wall_s": 42.4,
+  "ranking": [
+    {
+      "split": "4+4",
+      "evals_per_min": 50.91,
+      "wall_s": 42.4,
+      "ok": 12
+    },
+    {
+      "split": "3+5",
+      "evals_per_min": 40.6,
+      "wall_s": 53.2,
+      "ok": 12
+    },
+    {
+      "split": "2+6",
+      "evals_per_min": 37.85,
+      "wall_s": 57.1,
+      "ok": 12
+    },
+    {
+      "split": "1+7",
+      "evals_per_min": 22.56,
+      "wall_s": 95.7,
+      "ok": 12
+    }
+  ]
+}

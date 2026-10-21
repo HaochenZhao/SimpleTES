@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 # Shared cluster settings for the circle-packing SimpleTES reproduction.
 
-export HEAD_IP="${HEAD_IP:-28.33.242.47}"
 if [[ -n "${NODE_IP_LIST:-}" ]]; then
   ALL_IPS=()
   while read -r ip; do
     [[ -n "${ip}" ]] && ALL_IPS+=("${ip}")
   done < <(tr ',' '\n' <<<"${NODE_IP_LIST}" | cut -d: -f1)
 else
-  ALL_IPS=(28.33.242.47 28.33.244.15 28.33.244.19 28.33.243.17)
+  ALL_IPS=(28.33.244.15 28.33.241.232 28.33.244.228 28.33.244.27)
 fi
 export ALL_IPS
+export HEAD_IP="${HEAD_IP:-${ALL_IPS[0]}}"
 
 export PYTHON="${PYTHON:-/opt/conda/envs/torch-base/bin/python}"
 export VLLM_BIN="${VLLM_BIN:-/opt/conda/envs/torch-base/bin/vllm}"
@@ -27,7 +27,8 @@ export HTTP_PROXY="${HTTP_PROXY:-http://star-proxy.oa.com:3128}"
 export HTTPS_PROXY="${HTTPS_PROXY:-http://star-proxy.oa.com:3128}"
 export http_proxy="${http_proxy:-$HTTP_PROXY}"
 export https_proxy="${https_proxy:-$HTTPS_PROXY}"
-export no_proxy="${no_proxy:-localhost,127.0.0.1,.oa.com,.woa.com,${HEAD_IP},28.33.244.15,28.33.244.19,28.33.243.17}"
+_all_csv="$(IFS=','; echo "${ALL_IPS[*]}")"
+export no_proxy="${no_proxy:-localhost,127.0.0.1,.oa.com,.woa.com,${HEAD_IP},${_all_csv}}"
 export NO_PROXY="$no_proxy"
 
 mkdir -p "${LOG_DIR}"

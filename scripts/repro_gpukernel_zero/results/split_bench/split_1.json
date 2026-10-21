@@ -1,0 +1,316 @@
+{
+  "split": "1+7",
+  "wall_s": 95.7,
+  "n": 36,
+  "ok": 12,
+  "fail": 24,
+  "evals_per_min": 22.56,
+  "mean_s": 41.17,
+  "by_tag": {
+    "fail_raise": {
+      "n": 16,
+      "ok": 0,
+      "mean_s": 25.31
+    },
+    "fail_wrong": {
+      "n": 8,
+      "ok": 0,
+      "mean_s": 35.23
+    },
+    "seed": {
+      "n": 12,
+      "ok": 12,
+      "mean_s": 66.28
+    }
+  },
+  "rows": [
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.19",
+      "ok": false,
+      "elapsed_s": 6.29,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.15",
+      "ok": false,
+      "elapsed_s": 6.62,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.243.17",
+      "ok": false,
+      "elapsed_s": 6.97,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.15",
+      "ok": false,
+      "elapsed_s": 12.71,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.243.17",
+      "ok": false,
+      "elapsed_s": 12.8,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_wrong",
+      "host": "28.33.244.19",
+      "ok": false,
+      "elapsed_s": 14.49,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.243.17",
+      "ok": false,
+      "elapsed_s": 18.44,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_wrong",
+      "host": "28.33.244.15",
+      "ok": false,
+      "elapsed_s": 19.74,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.19",
+      "ok": false,
+      "elapsed_s": 20.11,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.243.17",
+      "ok": false,
+      "elapsed_s": 24.03,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.19",
+      "ok": false,
+      "elapsed_s": 26.17,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_wrong",
+      "host": "28.33.244.15",
+      "ok": false,
+      "elapsed_s": 27.15,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.243.17",
+      "ok": false,
+      "elapsed_s": 29.61,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_wrong",
+      "host": "28.33.244.19",
+      "ok": false,
+      "elapsed_s": 32.66,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.15",
+      "ok": false,
+      "elapsed_s": 32.82,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_wrong",
+      "host": "28.33.243.17",
+      "ok": false,
+      "elapsed_s": 36.63,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.19",
+      "ok": false,
+      "elapsed_s": 38.36,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.15",
+      "ok": false,
+      "elapsed_s": 38.67,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.243.17",
+      "ok": false,
+      "elapsed_s": 42.45,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.19",
+      "ok": false,
+      "elapsed_s": 44.2,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_raise",
+      "host": "28.33.244.15",
+      "ok": false,
+      "elapsed_s": 44.67,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_wrong",
+      "host": "28.33.243.17",
+      "ok": false,
+      "elapsed_s": 49.04,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_wrong",
+      "host": "28.33.244.19",
+      "ok": false,
+      "elapsed_s": 50.86,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "fail_wrong",
+      "host": "28.33.244.15",
+      "ok": false,
+      "elapsed_s": 51.31,
+      "score": 0.0,
+      "error_name": "GpuKernelEvaluationFailed"
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.243.17",
+      "ok": true,
+      "elapsed_s": 59.6,
+      "score": 0.06257118938484217,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.244.19",
+      "ok": true,
+      "elapsed_s": 63.84,
+      "score": 0.06290519729976671,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.244.15",
+      "ok": true,
+      "elapsed_s": 66.17,
+      "score": 0.06296105215287284,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.243.17",
+      "ok": true,
+      "elapsed_s": 63.66,
+      "score": 0.06273983553723546,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.244.15",
+      "ok": true,
+      "elapsed_s": 67.45,
+      "score": 0.06308305421094061,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.244.19",
+      "ok": true,
+      "elapsed_s": 66.72,
+      "score": 0.06303187172686062,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.243.17",
+      "ok": true,
+      "elapsed_s": 65.21,
+      "score": 0.06259531877135338,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.244.19",
+      "ok": true,
+      "elapsed_s": 68.04,
+      "score": 0.06312808098041539,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.244.15",
+      "ok": true,
+      "elapsed_s": 69.6,
+      "score": 0.06302665013579364,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.243.17",
+      "ok": true,
+      "elapsed_s": 67.0,
+      "score": 0.062337025869033405,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.244.15",
+      "ok": true,
+      "elapsed_s": 69.46,
+      "score": 0.06289166878001637,
+      "error_name": null
+    },
+    {
+      "tag": "seed",
+      "host": "28.33.244.19",
+      "ok": true,
+      "elapsed_s": 68.59,
+      "score": 0.06283661479458355,
+      "error_name": null
+    }
+  ]
+}

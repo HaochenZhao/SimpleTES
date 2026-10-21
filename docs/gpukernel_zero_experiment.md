@@ -81,13 +81,14 @@ nohup bash scripts/repro_gpukernel_zero/align_then_run.sh \
 
 `V` 本身仍是 HTTP 评测器返回的 `combined_score`。报告分数时以这套 zero harness 为准；若要判断「是不是真快」，把可疑 program 再丢回**开着静态检查的原服务器**做一次对照（不改原仓库代码，只是另起进程）。
 
-## 5. 进度
+## 5. 结果（2026-09-11 14:49 跑完）
 
 - [x] 复制 `datasets/gpukernel_zero`，原目录保持作者护栏
-- [x] zero 评测服务在 `28.33.243.17:8000`（compiler concurrency 1）
-- [x] H20 对齐 official best：`0.48256` / `2.072 ms`
-- [x] naive seed：`0.06264` / `15.96 ms`
-- [x] 论文量级 RPUCG 已启动：`checkpoints/gpukernel_zero_trimul/2026-09-08/instance-bd60257b`
-- [ ] 用 `results/progress.jsonl` + checkpoint `best_program.py` 看分数是否越过 0.48，以及 hacking
+- [x] 论文量级 RPUCG 跑完：生成 51200 / 51200，评测 48752
+- [x] best **0.425546**（~2.35 ms），H20 official `trimul_best` 的 88%
+- [x] 没有越过 0.48；best 是 `torch.compile` + FP16 融合，不是计时器 / cache hack
+- [x] 03:29（约 2.6 万 eval）之后约 2.3 万次评测零增益
 
-开搜约 7 分钟时 best=`0.108873`（仍远低于 H20 official 0.48）。生成比评测快：第一波 32×16 候选生成完后 `eval_q` 堆到约 490，这是预期瓶颈。Checkpoint 每 1024 次 eval 写一次。
+完整轨迹和工程中断见 `scripts/repro_gpukernel_zero/results/REPORT.md`。
+
+带护栏的原版对照已于 2026-09-11 15:51 按同一预算启动：`checkpoints/gpukernel_trimul`，实例 `604cbeb3`。

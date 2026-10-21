@@ -1,6 +1,10 @@
-# gpukernel_zero: dedicated exclusive eval node. Does not use upstream IPs.
+# gpukernel_zero: 3 exclusive eval nodes. Launcher 28.33.244.15 stays on vLLM.
 servers:
-  - ip: 28.33.243.17
+  - ip: 28.33.241.232
+    port: 8000
+  - ip: 28.33.244.228
+    port: 8000
+  - ip: 28.33.244.27
     port: 8000
 
 load_balance: random

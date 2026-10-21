@@ -3,6 +3,7 @@ Learn a lot from kernelbench
 """
 
 import ast
+import os
 import re
 from typing import List, Tuple, Dict, Any, Optional, Callable, Union
 
@@ -711,6 +712,18 @@ def validate_kernel_static(
         impl_check = BACKEND_IMPL_CHECK[backend]
         if impl_check not in forbidden_checks:
             forbidden_checks.append(impl_check)
+
+    # Paper initializes from naive PyTorch. Keep anti-hack gates, but do not
+    # zero a correct torch seed (or early torch refinements) for missing @triton.jit.
+    allow_torch = os.environ.get("SIMPLES_KERNEL_ALLOW_TORCH_IMPL", "").strip().lower() in {
+        "1", "true", "yes", "on",
+    }
+    if allow_torch:
+        for name in ("torch_computation_ops", "triton_impl", "pytorch_wrap"):
+            if name in forbidden_checks:
+                forbidden_checks.remove(name)
+            if name not in warning_checks:
+                warning_checks.append(name)
 
     # Aggregate results
     errors: List[str] = []
